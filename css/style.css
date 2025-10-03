@@ -1,0 +1,39 @@
+body{
+    text-align: center;
+background-color: rgb(152, 179, 203);
+color: rgb(0, 0, 0);
+}
+
+nav a{
+    margin-right: 17px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+
+
+.nao img{
+    border-radius: 17px;
+}
+
+.sim img{
+    border-radius: 17px;
+}
+
+.talvez img{
+    border-radius: 16px;
+    width: 320px;
+    height: 140px;
+
+}
+
+.claro img{
+    border-radius: 18px;
+}
+    
+.pode iframe{
+    border-radius: 18px;
+}
+
+
+    
