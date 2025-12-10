@@ -9,24 +9,31 @@
 <body>
   <header>
     <nav>
-      <a href="./primeiro.html">sobre energia solar</a>
+      <a href="./primeiro.html">Sobre energia solar</a>
       <a href="./segundo.html">calcular placas solares</a>
+      <a href="./arduino.html">Sistema Arduino</a>
     </nav>
   </header>
-  <h2>Calculadora de Placas Solares</h2>
+  <div class="container">
+    <div class="fundo">
 
-  <label for="potencia">potencia desejada:</label><br>
-  <input type="text" id="potencia"><br>
+      <h2>Calculadora de Placas Solares</h2>
+      
+      <label for="potencia">potencia desejada:</label><br>
+      <input type="text" id="potencia"><br>
+      
+      <label for="media">media de kWh</label><br>
+      <input type="text" id="media"><br>
+      
+      <label for="mes">selecione quantos meses desejados</label><br>
+      <input type="text" id="mes"><br>
+      
+      <label for="eficiencia">sua eficiencia</label><br>
+      <input type="text" id="eficiencia"><br>
+      
+      <button onclick="principal()">Calcular</button>
+      
+      <div id="resposta"></div>
+    </div>
 
-  <label for="media">media de kWh</label><br>
-  <input type="text" id="media"><br>
-
-  <label for="mes">selecione quantos meses desejados</label><br>
-  <input type="text" id="mes"><br>
-
-  <label for="eficiencia">sua eficiencia</label><br>
-  <input type="text" id="eficiencia"><br>
-
-  <button onclick="principal()">Calcular</button>
-
-  <div id="resposta"></div>
+  </div>

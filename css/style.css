@@ -2,6 +2,11 @@ body{
     text-align: center;
 background-color: rgb(152, 179, 203);
 color: rgb(0, 0, 0);
+background-image: url(../img/SOL1.png);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+background-attachment:fixed ;
 }
 
 nav a{
@@ -35,5 +40,11 @@ nav a{
     border-radius: 18px;
 }
 
+.fundo{
+background-color: rgba(240, 248, 255, 0.7);
+border-radius: 20px;
+padding: 5px;
+margin-bottom: 30px;
+}
 
     

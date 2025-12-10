@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>arduino</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="./primeiro.html">Sobre energia solar </a>
+            <a href="./segundo.html">calcular placas solares</a>
+            <a href="./arduino.html">Sistema Arduino</a>
+        </nav>
+    </header>
+    <h1>Arduino</h1>
+    
+    <p>Arduino é uma plataforma de prototipagem rápida que permite ao desenvolvedor criar dispositivos de maneira simples e prática. Utilizando bibliotecas que facilitam o desenvolvimento de códigos, esta plataforma se tornou a preferida de milhões de desenvolvedores em todo mundo, a entrada analógica e digital do Arduino tem uma faixa de leitura de 0 a 5 Volts e uma resolução de 10 bits, a linguagem de programaçao do arduino é a C++,
+    usando o aplicativo Arduino IDE </p>
+    <div class="na"> <img src=".//img/ahhaha.png"  alt="">
+    </div>
+    <br><br>
+    <hr>
+    <h1>Micro Controlador</h1>
+    <p>Uma unidade de microcontrolador (MCU) é essencialmente um pequeno computador em um único chip. Ele foi projetado para gerenciar tarefas específicas em um sistema incorporado sem a necessidade de um sistema operacional complexo.</p>
+    <div class="uuhu">
+        <img src=".//img/micro.png" alt="">
+    </div>
+    <br>
+    <hr>
+    <h1>Multimetro</h1>
+    <p>Um multímetro serve para medir tensão, corrente e resistência.
+        Também faz teste de continuidade, testa diodos e pode medir capacitância e frequência.
+        É usado para verificar tomadas, baterias, fios, componentes e detectar defeitos elétricos. </p>
+        <div class="Multimetro">
+            <img src="./img/multime.png" alt="">
+        <br>
+        <hr>
+        <h1>Resistor</h1>
+        <p>Um resistor é um componente eletrônico passivo fundamental, cuja função principal é limitar ou controlar o fluxo da corrente elétrica em um circuito,  é possivel medir a resistencia do resistor usando o multimetro configurado na função de ohmímetro (escala de Ohms, Ω)</p>
+        <div class="resi">
+            <img src=".//img/Resistor.png" alt="">
+        </div>
+        <br>
+        <hr>
+        <h1> ligação eletrônica do arduíno no tinkercad:</h1>
+        <div>
+            <img src="./img/humhum.png" alt="">
+        </div>
+        <br>
+        <hr>
+        <h1>medida de tensão no sistema de 7 Segmentos no tinkercad:</h1>
+        <div class="7segui">
+<img src="./img/7seguimentos.png" alt="">
+        </div>
+        <hr>
+        <h1>sistema do 7 seguimentos na pratica:</h1>
+        <div> <iframe width="300" height="300" src="https://www.youtube.com/embed/KtSf1CaVxWk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        <br>
+        <hr>
+        <h1>Codigo C++ do sistema de 7 seguimentos</h1>
+        <div class="thethe">
+            <P>
+                // C++ code
+                //
+                int definir = 0;
+                
+                void setup()
+                {
+                  pinMode(A0, INPUT);
+                  Serial.begin(9600);
+                  pinMode(7, OUTPUT);
+                  pinMode(8, OUTPUT);
+                  pinMode(9, OUTPUT);
+                  pinMode(10, OUTPUT);
+                  pinMode(11, OUTPUT);
+                  pinMode(12, OUTPUT);
+                  pinMode(13, OUTPUT);
+                
+                  definir = analogRead(A0);
+                }
+                
+                void loop()
+                {
+                  definir = analogRead(A0);
+                  Serial.println(analogRead(A0));
+                  if (analogRead(A0) <= 99) {
+                    digitalWrite(7, HIGH);
+                    digitalWrite(8, HIGH);
+                    digitalWrite(9, HIGH);
+                    digitalWrite(10, LOW);
+                    digitalWrite(11, HIGH);
+                    digitalWrite(12, HIGH);
+                    digitalWrite(13, HIGH);
+                  }
+                  if (analogRead(A0) >= 100) {
+                    digitalWrite(7, HIGH);
+                    digitalWrite(8, LOW);
+                    digitalWrite(9, LOW);
+                    digitalWrite(10, LOW);
+                    digitalWrite(11, LOW);
+                    digitalWrite(12, HIGH);
+                    digitalWrite(13, HIGH);
+                  }
+                  if (analogRead(A0) >= 200) {
+                    digitalWrite(7, LOW);
+                    digitalWrite(8, HIGH);
+                    digitalWrite(9, HIGH);
+                    digitalWrite(10, HIGH);
+                    digitalWrite(11, LOW);
+                    digitalWrite(12, HIGH);
+                    digitalWrite(13, HIGH);
+                  }
+                  if (analogRead(A0) >= 300) {
+                    digitalWrite(7, HIGH);
+                    digitalWrite(8, HIGH);
+                    digitalWrite(9, LOW);
+                    digitalWrite(10, HIGH);
+                    digitalWrite(11, LOW);
+                    digitalWrite(12, HIGH);
+                    digitalWrite(13, HIGH);
+                  }
+                  if (analogRead(A0) >= 400) {
+                    digitalWrite(7, HIGH);
+                    digitalWrite(8, LOW);
+                    digitalWrite(9, LOW);
+                    digitalWrite(10, HIGH);
+                    digitalWrite(11, HIGH);
+                    digitalWrite(12, HIGH);
+                    digitalWrite(13, LOW);
+                  }
+                  if (analogRead(A0) >= 500) {
+                    digitalWrite(7, HIGH);
+                    digitalWrite(8, HIGH);
+                    digitalWrite(9, LOW);
+                    digitalWrite(10, HIGH);
+                    digitalWrite(11, HIGH);
+                    digitalWrite(12, LOW);
+                    digitalWrite(13, HIGH);
+                    if (analogRead(A0) >= 600) {
+                      digitalWrite(7, HIGH);
+                      digitalWrite(8, HIGH);
+                      digitalWrite(9, HIGH);
+                      digitalWrite(10, HIGH);
+                      digitalWrite(11, HIGH);
+                      digitalWrite(12, LOW);
+                      digitalWrite(13, HIGH);
+                    }
+                    if (analogRead(A0) >= 700) {
+                      digitalWrite(7, HIGH);
+                      digitalWrite(8, LOW);
+                      digitalWrite(9, LOW);
+                      digitalWrite(10, LOW);
+                      digitalWrite(11, LOW);
+                      digitalWrite(12, HIGH);
+                      digitalWrite(13, HIGH);
+                    }
+                    if (analogRead(A0) >= 800) {
+                      digitalWrite(7, HIGH);
+                      digitalWrite(8, HIGH);
+                      digitalWrite(9, HIGH);
+                      digitalWrite(10, HIGH);
+                      digitalWrite(11, HIGH);
+                      digitalWrite(12, HIGH);
+                      digitalWrite(13, HIGH);
+                    }
+                    if (analogRead(A0) >= 900) {
+                      digitalWrite(7, HIGH);
+                      digitalWrite(8, LOW);
+                      digitalWrite(9, LOW);
+                      digitalWrite(10, HIGH);
+                      digitalWrite(11, HIGH);
+                      digitalWrite(12, HIGH);
+                      digitalWrite(13, HIGH);
+                    }
+                  }
+                  delay(10); // Delay a little bit to improve simulation performance
+                }
+            </P>
+        </div>
+        <br>
+        <hr>
+        <h1>Grafico do arduino funcionando </h1>
+        <img src="./img/grafico.png" alt="">
+        <br>
+        <hr>
+        <h1>
+          foto da medida de tensão no sistema de 7 Segmentos( valor 700 )
+        </h1>
+        <img src="./img/teste.png" alt="">
+        <br>
+        <hr>
+        <h1>foto da medição da resistência no potenciômetro de 10 k ohms</h1>
+        <img src="./img/kllll.png" alt="">
+        <br>
+        <hr>
+        <h1>Vieo do monitoramento no grafico do arduino: </h1>
+        <iframe width="360" height="315" src="https://www.youtube.com/embed/nRxvC46XDAA?si=227dZg5gjk359tvo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</div>
+</body>
+</html>
