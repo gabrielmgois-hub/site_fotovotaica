@@ -9,7 +9,7 @@
 <body>
     <header>
         <nav>
-            <a href="./primeiro.html">Sobre energia solar </a>
+            <a href="./index.html">Sobre energia solar </a>
             <a href="./segundo.html">calcular placas solares</a>
             <a href="./arduino.html">Sistema Arduino</a>
         </nav>
@@ -61,126 +61,126 @@
         <hr>
         <h1>Codigo C++ do sistema de 7 seguimentos</h1>
         <div class="thethe">
-            <P>
-                // C++ code
-                //
-                int definir = 0;
-                
-                void setup()
-                {
-                  pinMode(A0, INPUT);
-                  Serial.begin(9600);
-                  pinMode(7, OUTPUT);
-                  pinMode(8, OUTPUT);
-                  pinMode(9, OUTPUT);
-                  pinMode(10, OUTPUT);
-                  pinMode(11, OUTPUT);
-                  pinMode(12, OUTPUT);
-                  pinMode(13, OUTPUT);
-                
-                  definir = analogRead(A0);
-                }
-                
-                void loop()
-                {
-                  definir = analogRead(A0);
-                  Serial.println(analogRead(A0));
-                  if (analogRead(A0) <= 99) {
-                    digitalWrite(7, HIGH);
-                    digitalWrite(8, HIGH);
-                    digitalWrite(9, HIGH);
-                    digitalWrite(10, LOW);
-                    digitalWrite(11, HIGH);
-                    digitalWrite(12, HIGH);
-                    digitalWrite(13, HIGH);
-                  }
-                  if (analogRead(A0) >= 100) {
-                    digitalWrite(7, HIGH);
-                    digitalWrite(8, LOW);
-                    digitalWrite(9, LOW);
-                    digitalWrite(10, LOW);
-                    digitalWrite(11, LOW);
-                    digitalWrite(12, HIGH);
-                    digitalWrite(13, HIGH);
-                  }
-                  if (analogRead(A0) >= 200) {
-                    digitalWrite(7, LOW);
-                    digitalWrite(8, HIGH);
-                    digitalWrite(9, HIGH);
-                    digitalWrite(10, HIGH);
-                    digitalWrite(11, LOW);
-                    digitalWrite(12, HIGH);
-                    digitalWrite(13, HIGH);
-                  }
-                  if (analogRead(A0) >= 300) {
-                    digitalWrite(7, HIGH);
-                    digitalWrite(8, HIGH);
-                    digitalWrite(9, LOW);
-                    digitalWrite(10, HIGH);
-                    digitalWrite(11, LOW);
-                    digitalWrite(12, HIGH);
-                    digitalWrite(13, HIGH);
-                  }
-                  if (analogRead(A0) >= 400) {
-                    digitalWrite(7, HIGH);
-                    digitalWrite(8, LOW);
-                    digitalWrite(9, LOW);
-                    digitalWrite(10, HIGH);
-                    digitalWrite(11, HIGH);
-                    digitalWrite(12, HIGH);
-                    digitalWrite(13, LOW);
-                  }
-                  if (analogRead(A0) >= 500) {
-                    digitalWrite(7, HIGH);
-                    digitalWrite(8, HIGH);
-                    digitalWrite(9, LOW);
-                    digitalWrite(10, HIGH);
-                    digitalWrite(11, HIGH);
-                    digitalWrite(12, LOW);
-                    digitalWrite(13, HIGH);
-                    if (analogRead(A0) >= 600) {
-                      digitalWrite(7, HIGH);
-                      digitalWrite(8, HIGH);
-                      digitalWrite(9, HIGH);
-                      digitalWrite(10, HIGH);
-                      digitalWrite(11, HIGH);
-                      digitalWrite(12, LOW);
-                      digitalWrite(13, HIGH);
-                    }
-                    if (analogRead(A0) >= 700) {
-                      digitalWrite(7, HIGH);
-                      digitalWrite(8, LOW);
-                      digitalWrite(9, LOW);
-                      digitalWrite(10, LOW);
-                      digitalWrite(11, LOW);
-                      digitalWrite(12, HIGH);
-                      digitalWrite(13, HIGH);
-                    }
-                    if (analogRead(A0) >= 800) {
-                      digitalWrite(7, HIGH);
-                      digitalWrite(8, HIGH);
-                      digitalWrite(9, HIGH);
-                      digitalWrite(10, HIGH);
-                      digitalWrite(11, HIGH);
-                      digitalWrite(12, HIGH);
-                      digitalWrite(13, HIGH);
-                    }
-                    if (analogRead(A0) >= 900) {
-                      digitalWrite(7, HIGH);
-                      digitalWrite(8, LOW);
-                      digitalWrite(9, LOW);
-                      digitalWrite(10, HIGH);
-                      digitalWrite(11, HIGH);
-                      digitalWrite(12, HIGH);
-                      digitalWrite(13, HIGH);
-                    }
-                  }
-                  delay(10); // Delay a little bit to improve simulation performance
-                }
-            </P>
-        </div>
-        <br>
-        <hr>
+            <pre><code>
+// C++ code
+//
+int definir = 0;
+
+void setup()
+{
+  pinMode(A0, INPUT);
+  Serial.begin(9600);
+  pinMode(7, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(9, OUTPUT);
+  pinMode(10, OUTPUT);
+  pinMode(11, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(13, OUTPUT);
+
+  definir = analogRead(A0);
+}
+
+void loop()
+{
+  definir = analogRead(A0);
+  Serial.println(analogRead(A0));
+  if (analogRead(A0) <= 99) {
+    digitalWrite(7, HIGH);
+    digitalWrite(8, HIGH);
+    digitalWrite(9, HIGH);
+    digitalWrite(10, LOW);
+    digitalWrite(11, HIGH);
+    digitalWrite(12, HIGH);
+    digitalWrite(13, HIGH);
+  }
+  if (analogRead(A0) >= 100) {
+    digitalWrite(7, HIGH);
+    digitalWrite(8, LOW);
+    digitalWrite(9, LOW);
+    digitalWrite(10, LOW);
+    digitalWrite(11, LOW);
+    digitalWrite(12, HIGH);
+    digitalWrite(13, HIGH);
+  }
+  if (analogRead(A0) >= 200) {
+    digitalWrite(7, LOW);
+    digitalWrite(8, HIGH);
+    digitalWrite(9, HIGH);
+    digitalWrite(10, HIGH);
+    digitalWrite(11, LOW);
+    digitalWrite(12, HIGH);
+    digitalWrite(13, HIGH);
+  }
+  if (analogRead(A0) >= 300) {
+    digitalWrite(7, HIGH);
+    digitalWrite(8, HIGH);
+    digitalWrite(9, LOW);
+    digitalWrite(10, HIGH);
+    digitalWrite(11, LOW);
+    digitalWrite(12, HIGH);
+    digitalWrite(13, HIGH);
+  }
+  if (analogRead(A0) >= 400) {
+    digitalWrite(7, HIGH);
+    digitalWrite(8, LOW);
+    digitalWrite(9, LOW);
+    digitalWrite(10, HIGH);
+    digitalWrite(11, HIGH);
+    digitalWrite(12, HIGH);
+    digitalWrite(13, LOW);
+  }
+  if (analogRead(A0) >= 500) {
+    digitalWrite(7, HIGH);
+    digitalWrite(8, HIGH);
+    digitalWrite(9, LOW);
+    digitalWrite(10, HIGH);
+    digitalWrite(11, HIGH);
+    digitalWrite(12, LOW);
+    digitalWrite(13, HIGH);
+    if (analogRead(A0) >= 600) {
+      digitalWrite(7, HIGH);
+      digitalWrite(8, HIGH);
+      digitalWrite(9, HIGH);
+      digitalWrite(10, HIGH);
+      digitalWrite(11, HIGH);
+      digitalWrite(12, LOW);
+      digitalWrite(13, HIGH);
+    }
+    if (analogRead(A0) >= 700) {
+      digitalWrite(7, HIGH);
+      digitalWrite(8, LOW);
+      digitalWrite(9, LOW);
+      digitalWrite(10, LOW);
+      digitalWrite(11, LOW);
+      digitalWrite(12, HIGH);
+      digitalWrite(13, HIGH);
+    }
+    if (analogRead(A0) >= 800) {
+      digitalWrite(7, HIGH);
+      digitalWrite(8, HIGH);
+      digitalWrite(9, HIGH);
+      digitalWrite(10, HIGH);
+      digitalWrite(11, HIGH);
+      digitalWrite(12, HIGH);
+      digitalWrite(13, HIGH);
+    }
+    if (analogRead(A0) >= 900) {
+      digitalWrite(7, HIGH);
+      digitalWrite(8, LOW);
+      digitalWrite(9, LOW);
+      digitalWrite(10, HIGH);
+      digitalWrite(11, HIGH);
+      digitalWrite(12, HIGH);
+      digitalWrite(13, HIGH);
+    }
+  }
+  delay(10); // Delay a little bit to improve simulation performance
+}   
+              </code></pre>
+            </div>
+            <br>
+            <hr>
         <h1>Grafico do arduino funcionando </h1>
         <img src="./img/grafico.png" alt="">
         <br>
